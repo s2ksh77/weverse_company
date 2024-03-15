@@ -1,0 +1,983 @@
+{
+  "booths": [
+    {
+      "id": 57,
+      "name": "Weverse 포토부스",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "queuingStartDateTime": "2024-03-15T01:00:00",
+      "queuingEndDateTime": "2024-03-15T22:50:00"
+    },
+    {
+      "id": 58,
+      "name": "Weverse by Fans - 포토카드 부스",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "queuingStartDateTime": "2024-03-15T02:00:00",
+      "queuingEndDateTime": "2024-03-15T21:50:00"
+    },
+    {
+      "id": 59,
+      "name": "Weverse by Fans - 핀뱃지 부스",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "queuingStartDateTime": "2024-03-15T00:00:00",
+      "queuingEndDateTime": "2024-03-15T23:50:00"
+    },
+    {
+      "id": 60,
+      "name": "공식 상품 판매 부스 (현장 판매)",
+      "startTime": "00:00:00",
+      "endTime": "03:50:00",
+      "queuingStartDateTime": "2024-03-15T01:00:00",
+      "queuingEndDateTime": "2024-03-15T02:50:00"
+    },
+    {
+      "id": 61,
+      "name": "Weverse Con Festival 공식 상품 판매 부스 (현장 판매)",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "queuingStartDateTime": "2024-03-15T23:00:00",
+      "queuingEndDateTime": "2024-03-15T23:50:00"
+    },
+    {
+      "id": 62,
+      "name": "본인 확인 부스",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "queuingStartDateTime": "2024-03-15T00:00:00",
+      "queuingEndDateTime": "2024-03-15T23:50:00"
+    }
+  ],
+  "details": [
+    {
+      "id": 57,
+      "name": "Weverse 포토부스",
+      "locationDescription": "한얼광장 내 KSPO DOME 앞",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "maxPersonsByTeam": 1
+    },
+    {
+      "id": 58,
+      "name": "Weverse by Fans - 포토카드 부스",
+      "locationDescription": "한얼광장 내 KSPO DOME 앞",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "maxPersonsByTeam": 5
+    },
+    {
+      "id": 59,
+      "name": "Weverse by Fans - 핀뱃지 부스",
+      "locationDescription": "한얼광장 내 KSPO DOME 앞",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "maxPersonsByTeam": 1
+    },
+    {
+      "id": 60,
+      "name": "공식 상품 판매 부스 (현장 판매)",
+      "locationDescription": "만남의 광장",
+      "startTime": "00:00:00",
+      "endTime": "03:50:00",
+      "maxPersonsByTeam": 1
+    },
+    {
+      "id": 61,
+      "name": "Weverse Con Festival 공식 상품 판매 부스 (현장 판매)",
+      "locationDescription": "만남의 광장",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "maxPersonsByTeam": 1
+    },
+    {
+      "id": 62,
+      "name": "본인 확인 부스",
+      "locationDescription": "한얼광장",
+      "startTime": "00:00:00",
+      "endTime": "23:50:00",
+      "maxPersonsByTeam": 1
+    }
+  ],
+  "reservations": [],
+  "email-domain": [
+    {
+      "label": "gmail.com",
+      "value": "gmail.com"
+    },
+    {
+      "label": "naver.com",
+      "value": "naver.com"
+    },
+    {
+      "label": "daum.net",
+      "value": "daum.net"
+    },
+    {
+      "label": "hotmail.com",
+      "value": "hotmail.com"
+    },
+    {
+      "label": "yahoo.com",
+      "value": "yahoo.com"
+    }
+  ],
+  "country-code": [
+    {
+      "label": "+82",
+      "value": "SOUTH_KOREA"
+    },
+    {
+      "label": "+93",
+      "value": "AFGHANISTAN"
+    },
+    {
+      "label": "+355",
+      "value": "ALBANIA"
+    },
+    {
+      "label": "+213",
+      "value": "ALGERIA"
+    },
+    {
+      "label": "+376",
+      "value": "ANDORRA"
+    },
+    {
+      "label": "+244",
+      "value": "ANGOLA"
+    },
+    {
+      "label": "+672",
+      "value": "ANTARCTICA"
+    },
+    {
+      "label": "+54",
+      "value": "ARGENTINA"
+    },
+    {
+      "label": "+374",
+      "value": "ARMENIA"
+    },
+    {
+      "label": "+297",
+      "value": "ARUBA"
+    },
+    {
+      "label": "+61",
+      "value": "AUSTRALIA"
+    },
+    {
+      "label": "+43",
+      "value": "AUSTRIA"
+    },
+    {
+      "label": "+994",
+      "value": "AZERBAIJAN"
+    },
+    {
+      "label": "+973",
+      "value": "BAHRAIN"
+    },
+    {
+      "label": "+880",
+      "value": "BANGLADESH"
+    },
+    {
+      "label": "+375",
+      "value": "BELARUS"
+    },
+    {
+      "label": "+32",
+      "value": "BELGIUM"
+    },
+    {
+      "label": "+501",
+      "value": "BELIZE"
+    },
+    {
+      "label": "+229",
+      "value": "BENIN"
+    },
+    {
+      "label": "+975",
+      "value": "BHUTAN"
+    },
+    {
+      "label": "+591",
+      "value": "BOLIVIA"
+    },
+    {
+      "label": "+387",
+      "value": "BOSNIA_AND_HERZEGOVINA"
+    },
+    {
+      "label": "+267",
+      "value": "BOTSWANA"
+    },
+    {
+      "label": "+55",
+      "value": "BRAZIL"
+    },
+    {
+      "label": "+246",
+      "value": "BRITISH_INDIAN_OCEAN_TERRITORY"
+    },
+    {
+      "label": "+673",
+      "value": "BRUNEI"
+    },
+    {
+      "label": "+359",
+      "value": "BULGARIA"
+    },
+    {
+      "label": "+226",
+      "value": "BURKINA_FASO"
+    },
+    {
+      "label": "+257",
+      "value": "BURUNDI"
+    },
+    {
+      "label": "+855",
+      "value": "CAMBODIA"
+    },
+    {
+      "label": "+237",
+      "value": "CAMEROON"
+    },
+    {
+      "label": "+1",
+      "value": "CANADA"
+    },
+    {
+      "label": "+238",
+      "value": "CAPE_VERDE"
+    },
+    {
+      "label": "+236",
+      "value": "CENTRAL_AFRICAN_REPUBLIC"
+    },
+    {
+      "label": "+235",
+      "value": "CHAD"
+    },
+    {
+      "label": "+56",
+      "value": "CHILE"
+    },
+    {
+      "label": "+86",
+      "value": "CHINA"
+    },
+    {
+      "label": "+61",
+      "value": "CHRISTMAS_ISLAND"
+    },
+    {
+      "label": "+61",
+      "value": "COCOS_ISLANDS"
+    },
+    {
+      "label": "+57",
+      "value": "COLOMBIA"
+    },
+    {
+      "label": "+269",
+      "value": "COMOROS"
+    },
+    {
+      "label": "+682",
+      "value": "COOK_ISLANDS"
+    },
+    {
+      "label": "+506",
+      "value": "COSTA_RICA"
+    },
+    {
+      "label": "+385",
+      "value": "CROATIA"
+    },
+    {
+      "label": "+53",
+      "value": "CUBA"
+    },
+    {
+      "label": "+599",
+      "value": "CURACAO"
+    },
+    {
+      "label": "+357",
+      "value": "CYPRUS"
+    },
+    {
+      "label": "+420",
+      "value": "CZECH_REPUBLIC"
+    },
+    {
+      "label": "+243",
+      "value": "DEMOCRATIC_REPUBLIC_OF_THE_CONGO"
+    },
+    {
+      "label": "+45",
+      "value": "DENMARK"
+    },
+    {
+      "label": "+253",
+      "value": "DJIBOUTI"
+    },
+    {
+      "label": "+670",
+      "value": "EAST_TIMOR"
+    },
+    {
+      "label": "+593",
+      "value": "ECUADOR"
+    },
+    {
+      "label": "+20",
+      "value": "EGYPT"
+    },
+    {
+      "label": "+503",
+      "value": "EL_SALVADOR"
+    },
+    {
+      "label": "+240",
+      "value": "EQUATORIAL_GUINEA"
+    },
+    {
+      "label": "+291",
+      "value": "ERITREA"
+    },
+    {
+      "label": "+372",
+      "value": "ESTONIA"
+    },
+    {
+      "label": "+251",
+      "value": "ETHIOPIA"
+    },
+    {
+      "label": "+500",
+      "value": "FALKLAND_ISLANDS"
+    },
+    {
+      "label": "+298",
+      "value": "FAROE_ISLANDS"
+    },
+    {
+      "label": "+679",
+      "value": "FIJI"
+    },
+    {
+      "label": "+358",
+      "value": "FINLAND"
+    },
+    {
+      "label": "+33",
+      "value": "FRANCE"
+    },
+    {
+      "label": "+689",
+      "value": "FRENCH_POLYNESIA"
+    },
+    {
+      "label": "+241",
+      "value": "GABON"
+    },
+    {
+      "label": "+220",
+      "value": "GAMBIA"
+    },
+    {
+      "label": "+995",
+      "value": "GEORGIA"
+    },
+    {
+      "label": "+49",
+      "value": "GERMANY"
+    },
+    {
+      "label": "+233",
+      "value": "GHANA"
+    },
+    {
+      "label": "+350",
+      "value": "GIBRALTAR"
+    },
+    {
+      "label": "+30",
+      "value": "GREECE"
+    },
+    {
+      "label": "+299",
+      "value": "GREENLAND"
+    },
+    {
+      "label": "+502",
+      "value": "GUATEMALA"
+    },
+    {
+      "label": "+224",
+      "value": "GUINEA"
+    },
+    {
+      "label": "+245",
+      "value": "GUINEA_BISSAU"
+    },
+    {
+      "label": "+592",
+      "value": "GUYANA"
+    },
+    {
+      "label": "+509",
+      "value": "HAITI"
+    },
+    {
+      "label": "+504",
+      "value": "HONDURAS"
+    },
+    {
+      "label": "+852",
+      "value": "HONG_KONG"
+    },
+    {
+      "label": "+36",
+      "value": "HUNGARY"
+    },
+    {
+      "label": "+354",
+      "value": "ICELAND"
+    },
+    {
+      "label": "+91",
+      "value": "INDIA"
+    },
+    {
+      "label": "+62",
+      "value": "INDONESIA"
+    },
+    {
+      "label": "+98",
+      "value": "IRAN"
+    },
+    {
+      "label": "+964",
+      "value": "IRAQ"
+    },
+    {
+      "label": "+353",
+      "value": "IRELAND"
+    },
+    {
+      "label": "+972",
+      "value": "ISRAEL"
+    },
+    {
+      "label": "+39",
+      "value": "ITALY"
+    },
+    {
+      "label": "+225",
+      "value": "IVORY_COAST"
+    },
+    {
+      "label": "+81",
+      "value": "JAPAN"
+    },
+    {
+      "label": "+962",
+      "value": "JORDAN"
+    },
+    {
+      "label": "+7",
+      "value": "KAZAKHSTAN"
+    },
+    {
+      "label": "+254",
+      "value": "KENYA"
+    },
+    {
+      "label": "+686",
+      "value": "KIRIBATI"
+    },
+    {
+      "label": "+383",
+      "value": "KOSOVO"
+    },
+    {
+      "label": "+965",
+      "value": "KUWAIT"
+    },
+    {
+      "label": "+996",
+      "value": "KYRGYZSTAN"
+    },
+    {
+      "label": "+856",
+      "value": "LAOS"
+    },
+    {
+      "label": "+371",
+      "value": "LATVIA"
+    },
+    {
+      "label": "+961",
+      "value": "LEBANON"
+    },
+    {
+      "label": "+266",
+      "value": "LESOTHO"
+    },
+    {
+      "label": "+231",
+      "value": "LIBERIA"
+    },
+    {
+      "label": "+218",
+      "value": "LIBYA"
+    },
+    {
+      "label": "+423",
+      "value": "LIECHTENSTEIN"
+    },
+    {
+      "label": "+370",
+      "value": "LITHUANIA"
+    },
+    {
+      "label": "+352",
+      "value": "LUXEMBOURG"
+    },
+    {
+      "label": "+853",
+      "value": "MACAU"
+    },
+    {
+      "label": "+389",
+      "value": "MACEDONIA"
+    },
+    {
+      "label": "+261",
+      "value": "MADAGASCAR"
+    },
+    {
+      "label": "+265",
+      "value": "MALAWI"
+    },
+    {
+      "label": "+60",
+      "value": "MALAYSIA"
+    },
+    {
+      "label": "+960",
+      "value": "MALDIVES"
+    },
+    {
+      "label": "+223",
+      "value": "MALI"
+    },
+    {
+      "label": "+356",
+      "value": "MALTA"
+    },
+    {
+      "label": "+692",
+      "value": "MARSHALL_ISLANDS"
+    },
+    {
+      "label": "+222",
+      "value": "MAURITANIA"
+    },
+    {
+      "label": "+230",
+      "value": "MAURITIUS"
+    },
+    {
+      "label": "+262",
+      "value": "MAYOTTE"
+    },
+    {
+      "label": "+52",
+      "value": "MEXICO"
+    },
+    {
+      "label": "+691",
+      "value": "MICRONESIA"
+    },
+    {
+      "label": "+373",
+      "value": "MOLDOVA"
+    },
+    {
+      "label": "+377",
+      "value": "MONACO"
+    },
+    {
+      "label": "+976",
+      "value": "MONGOLIA"
+    },
+    {
+      "label": "+382",
+      "value": "MONTENEGRO"
+    },
+    {
+      "label": "+212",
+      "value": "MOROCCO"
+    },
+    {
+      "label": "+258",
+      "value": "MOZAMBIQUE"
+    },
+    {
+      "label": "+95",
+      "value": "MYANMAR"
+    },
+    {
+      "label": "+264",
+      "value": "NAMIBIA"
+    },
+    {
+      "label": "+674",
+      "value": "NAURU"
+    },
+    {
+      "label": "+977",
+      "value": "NEPAL"
+    },
+    {
+      "label": "+31",
+      "value": "NETHERLANDS"
+    },
+    {
+      "label": "+599",
+      "value": "NETHERLANDS_ANTILLES"
+    },
+    {
+      "label": "+687",
+      "value": "NEW_CALEDONIA"
+    },
+    {
+      "label": "+64",
+      "value": "NEW_ZEALAND"
+    },
+    {
+      "label": "+505",
+      "value": "NICARAGUA"
+    },
+    {
+      "label": "+227",
+      "value": "NIGER"
+    },
+    {
+      "label": "+234",
+      "value": "NIGERIA"
+    },
+    {
+      "label": "+683",
+      "value": "NIUE"
+    },
+    {
+      "label": "+850",
+      "value": "NORTH_KOREA"
+    },
+    {
+      "label": "+47",
+      "value": "NORWAY"
+    },
+    {
+      "label": "+968",
+      "value": "OMAN"
+    },
+    {
+      "label": "+92",
+      "value": "PAKISTAN"
+    },
+    {
+      "label": "+680",
+      "value": "PALAU"
+    },
+    {
+      "label": "+970",
+      "value": "PALESTINE"
+    },
+    {
+      "label": "+507",
+      "value": "PANAMA"
+    },
+    {
+      "label": "+675",
+      "value": "PAPUA_NEW_GUINEA"
+    },
+    {
+      "label": "+595",
+      "value": "PARAGUAY"
+    },
+    {
+      "label": "+51",
+      "value": "PERU"
+    },
+    {
+      "label": "+63",
+      "value": "PHILIPPINES"
+    },
+    {
+      "label": "+64",
+      "value": "PITCAIRN"
+    },
+    {
+      "label": "+48",
+      "value": "POLAND"
+    },
+    {
+      "label": "+351",
+      "value": "PORTUGAL"
+    },
+    {
+      "label": "+974",
+      "value": "QATAR"
+    },
+    {
+      "label": "+242",
+      "value": "REPUBLIC_OF_THE_CONGO"
+    },
+    {
+      "label": "+262",
+      "value": "REUNION"
+    },
+    {
+      "label": "+40",
+      "value": "ROMANIA"
+    },
+    {
+      "label": "+7",
+      "value": "RUSSIA"
+    },
+    {
+      "label": "+250",
+      "value": "RWANDA"
+    },
+    {
+      "label": "+590",
+      "value": "SAINT_BARTHELEMY"
+    },
+    {
+      "label": "+290",
+      "value": "SAINT_HELENA"
+    },
+    {
+      "label": "+590",
+      "value": "SAINT_MARTIN"
+    },
+    {
+      "label": "+508",
+      "value": "SAINT_PIERRE_AND_MIQUELON"
+    },
+    {
+      "label": "+685",
+      "value": "SAMOA"
+    },
+    {
+      "label": "+378",
+      "value": "SAN_MARINO"
+    },
+    {
+      "label": "+239",
+      "value": "SAO_TOME_AND_PRINCIPE"
+    },
+    {
+      "label": "+966",
+      "value": "SAUDI_ARABIA"
+    },
+    {
+      "label": "+221",
+      "value": "SENEGAL"
+    },
+    {
+      "label": "+381",
+      "value": "SERBIA"
+    },
+    {
+      "label": "+248",
+      "value": "SEYCHELLES"
+    },
+    {
+      "label": "+232",
+      "value": "SIERRA_LEONE"
+    },
+    {
+      "label": "+65",
+      "value": "SINGAPORE"
+    },
+    {
+      "label": "+421",
+      "value": "SLOVAKIA"
+    },
+    {
+      "label": "+386",
+      "value": "SLOVENIA"
+    },
+    {
+      "label": "+677",
+      "value": "SOLOMON_ISLANDS"
+    },
+    {
+      "label": "+252",
+      "value": "SOMALIA"
+    },
+    {
+      "label": "+27",
+      "value": "SOUTH_AFRICA"
+    },
+    {
+      "label": "+211",
+      "value": "SOUTH_SUDAN"
+    },
+    {
+      "label": "+34",
+      "value": "SPAIN"
+    },
+    {
+      "label": "+94",
+      "value": "SRI_LANKA"
+    },
+    {
+      "label": "+249",
+      "value": "SUDAN"
+    },
+    {
+      "label": "+597",
+      "value": "SURINAME"
+    },
+    {
+      "label": "+47",
+      "value": "SVALBARD_AND_JAN_MAYEN"
+    },
+    {
+      "label": "+268",
+      "value": "SWAZILAND"
+    },
+    {
+      "label": "+46",
+      "value": "SWEDEN"
+    },
+    {
+      "label": "+41",
+      "value": "SWITZERLAND"
+    },
+    {
+      "label": "+963",
+      "value": "SYRIA"
+    },
+    {
+      "label": "+886",
+      "value": "TAIWAN"
+    },
+    {
+      "label": "+992",
+      "value": "TAJIKISTAN"
+    },
+    {
+      "label": "+255",
+      "value": "TANZANIA"
+    },
+    {
+      "label": "+66",
+      "value": "THAILAND"
+    },
+    {
+      "label": "+228",
+      "value": "TOGO"
+    },
+    {
+      "label": "+690",
+      "value": "TOKELAU"
+    },
+    {
+      "label": "+676",
+      "value": "TONGA"
+    },
+    {
+      "label": "+216",
+      "value": "TUNISIA"
+    },
+    {
+      "label": "+90",
+      "value": "TURKEY"
+    },
+    {
+      "label": "+993",
+      "value": "TURKMENISTAN"
+    },
+    {
+      "label": "+688",
+      "value": "TUVALU"
+    },
+    {
+      "label": "+256",
+      "value": "UGANDA"
+    },
+    {
+      "label": "+380",
+      "value": "UKRAINE"
+    },
+    {
+      "label": "+971",
+      "value": "UNITED_ARAB_EMIRATES"
+    },
+    {
+      "label": "+44",
+      "value": "UNITED_KINGDOM"
+    },
+    {
+      "label": "+1",
+      "value": "UNITED_STATES"
+    },
+    {
+      "label": "+598",
+      "value": "URUGUAY"
+    },
+    {
+      "label": "+998",
+      "value": "UZBEKISTAN"
+    },
+    {
+      "label": "+678",
+      "value": "VANUATU"
+    },
+    {
+      "label": "+379",
+      "value": "VATICAN"
+    },
+    {
+      "label": "+58",
+      "value": "VENEZUELA"
+    },
+    {
+      "label": "+84",
+      "value": "VIETNAM"
+    },
+    {
+      "label": "+681",
+      "value": "WALLIS_AND_FUTUNA"
+    },
+    {
+      "label": "+212",
+      "value": "WESTERN_SAHARA"
+    },
+    {
+      "label": "+967",
+      "value": "YEMEN"
+    },
+    {
+      "label": "+260",
+      "value": "ZAMBIA"
+    },
+    {
+      "label": "+263",
+      "value": "ZIMBABWE"
+    }
+  ]
+}

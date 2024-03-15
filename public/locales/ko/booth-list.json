@@ -1,0 +1,17 @@
+{
+  "list.booth.gps.desc": "페스티벌 현장 반경 3km 안에서 신청 가능하며, <strong class='strong'>위치 정보 이용 동의</strong>가 필수입니다.",
+  "list.booth.apply.btn": "신청",
+  "list.booth.close.btn": "마감",
+  "list.booth.ready.btn": "준비중",
+  "list.booth.operantion.hours": "줄서기 오픈 시간",
+  "list.booth.login.badge": "로그인",
+  "list.ticket.area.title": "티켓 등록",
+  "list.ticket.area.desc": "스탠딩존은 티켓 등록이 필요하며, 위버스 앱에서만 신청 가능합니다.",
+  "list.ticket.regist.btn": "등록",
+  "list.my.histoty.btn": "나의 줄서기 내역",
+  "list.booth.alert.ready": "줄서기 준비 중입니다.",
+  "list.booth.alert.closed": "줄서기가 마감되었습니다.",
+  "list.alert.weverse.app.update": "위버스 줄서기 서비스 이용을 위해 앱을 최신 버전으로 업데이트 해주세요.",
+  "list.alert.ok.btn": "확인",
+  "list.alert.cancel.btn": "취소"
+}

@@ -1,0 +1,14 @@
+{
+  "waiting.success.title": "Successfully joined",
+  "waiting.success.group": "My queue group",
+  "waiting.info.booth": "Booth",
+  "waiting.info.location": "Location",
+  "waiting.info.people.count": "Number of people",
+  "waiting.info.people.count.unit": "{{peopleCount}}",
+  "waiting.info.notification.channel": "Queue updates",
+  "waiting.notice.1": "Once you have joined a queue, make sure to check your KakaoTalk or email for queue updates.",
+  "waiting.notice.2": "If you miss your call to enter and do not enter the booth after you have been notified three times, you will lose your turn.",
+  "waiting.history.btn": "My queues",
+  "waiting.status.btn": "Queue status",
+  "waiting.notice.title": "Please Note"
+}

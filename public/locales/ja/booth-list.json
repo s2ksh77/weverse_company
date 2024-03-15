@@ -1,0 +1,17 @@
+{
+  "list.booth.gps.desc": "公演会場の周辺3km以内で利用可能であり、<strong class='strong'>位置情報へのアクセスを許可</strong>する必要があります。",
+  "list.booth.apply.btn": "受付する",
+  "list.booth.close.btn": "受付終了",
+  "list.booth.ready.btn": "準備中",
+  "list.booth.operantion.hours": "順番待ち開始時間",
+  "list.booth.login.badge": "ログイン",
+  "list.ticket.area.title": "チケット登録",
+  "list.ticket.area.desc": "「Standing」の順番待ちは Weverseアプリでのみ受付可能です。 (チケットの登録が必要です。)",
+  "list.ticket.regist.btn": "登録",
+  "list.my.histoty.btn": "受付履歴はこちら",
+  "list.booth.alert.ready": "受付準備中です。",
+  "list.booth.alert.closed": "受付終了しました。",
+  "list.alert.weverse.app.update": "Weverse順番待ちをご利用いただくには、アプリを最新バージョンにアップデートする必要があります。",
+  "list.alert.ok.btn": "確認",
+  "list.alert.cancel.btn": "キャンセル"
+}

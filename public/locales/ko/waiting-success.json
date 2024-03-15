@@ -1,0 +1,14 @@
+{
+  "waiting.success.title": "신청완료",
+  "waiting.success.group": "나의 대기그룹",
+  "waiting.info.booth": "부스",
+  "waiting.info.location": "위치",
+  "waiting.info.people.count": "인원",
+  "waiting.info.people.count.unit": "{{peopleCount}}명",
+  "waiting.info.notification.channel": "알림방법",
+  "waiting.notice.1": "줄서기 신청 시, 선택한 카카오톡/e-mail 알림을 꼭 확인해주세요.",
+  "waiting.notice.2": "신청자가 입장 알림 이후 부스를 방문하지 않을 시, 입장이 불가하오니 이용에 유의해 주시기 바랍니다.",
+  "waiting.history.btn": "내역보기",
+  "waiting.status.btn": "현황보기",
+  "waiting.notice.title": "안내사항"
+}

@@ -1,0 +1,17 @@
+{
+  "list.booth.gps.desc": "Only available within a 3-km radius of the festival venue. You must <strong class='strong'>grant access to your location</strong>.",
+  "list.booth.apply.btn": "Join queue",
+  "list.booth.close.btn": "Closed",
+  "list.booth.ready.btn": "Getting ready",
+  "list.booth.operantion.hours": "Queue opens at",
+  "list.booth.login.badge": "Login",
+  "list.ticket.area.title": "Redeem ticket",
+  "list.ticket.area.desc": "You must redeem a ticket to enter \"Standing\". You can redeem your tickets only on the Weverse app.",
+  "list.ticket.regist.btn": "Redeem",
+  "list.my.histoty.btn": "My queues",
+  "list.booth.alert.ready": "Getting ready to open queues.",
+  "list.booth.alert.closed": "Queue closed.",
+  "list.alert.weverse.app.update": "Please update the Weverse app to the latest version to use Weverse Queues.",
+  "list.alert.ok.btn": "Confirm",
+  "list.alert.cancel.btn": "Cancel"
+}

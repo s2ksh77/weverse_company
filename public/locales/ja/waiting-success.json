@@ -1,0 +1,14 @@
+{
+  "waiting.success.title": "受付完了",
+  "waiting.success.group": "あなたの順番待ちグループ",
+  "waiting.info.booth": "ブース",
+  "waiting.info.location": "位置",
+  "waiting.info.people.count": "人数",
+  "waiting.info.people.count.unit": "{{peopleCount}}名",
+  "waiting.info.notification.channel": "通知方法",
+  "waiting.notice.1": "受付時に選択した通知方法(KakaoTalk・メール)でのお呼び出しを必ずご確認いただきますようお願いいたします。",
+  "waiting.notice.2": "お呼び出し通知を受け取った後にブースにいらっしゃらない場合、ご入場いただけませんのでご注意ください。",
+  "waiting.history.btn": "受付履歴はこちら",
+  "waiting.status.btn": "順番待ち状況はこちら",
+  "waiting.notice.title": "注意事項"
+}
