@@ -19,6 +19,6 @@ export const useBooths = (): UseQueryResult<BoothItemType[]> =>
 
 export const useBooth = (id: string): UseQueryResult<BoothDetailItemType> =>
   useQuery<BoothDetailItemType>({
-    queryKey: boothQueryKey.details(),
+    queryKey: boothQueryKey.detail(id),
     queryFn: () => boothRepository.getBoothById(id),
   });

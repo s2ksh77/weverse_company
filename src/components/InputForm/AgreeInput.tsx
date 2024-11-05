@@ -1,3 +1,4 @@
+import { TRANSLATE_META } from "@/common/constants";
 import React, {
   ChangeEvent,
   forwardRef,
@@ -10,7 +11,7 @@ import { useTranslation } from "react-i18next";
 type AgreeInputProps = {};
 
 export const AgreeInput = forwardRef<{}, AgreeInputProps>((props, ref) => {
-  const { t } = useTranslation("booth-detail");
+  const { t } = useTranslation(TRANSLATE_META.DETAIL);
   const [isChecked, setIsChecked] = useState(false);
   const [isValid, setIsValid] = useState(true);
 

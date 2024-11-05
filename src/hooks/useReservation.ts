@@ -5,7 +5,6 @@ import {
 } from "@/pages/queue/types";
 import { reservationRepository } from "@/stores/repository/ReservationRepository";
 import {
-  QueryClient,
   useMutation,
   useQuery,
   useQueryClient,
@@ -46,10 +45,14 @@ export const useRemoveReservation = () => {
 
   return useMutation({
     mutationFn: (id: string) => reservationRepository.deleteReservation(id),
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: reservationQueryKey.list(),
-      });
+    onSuccess: (_, id) => {
+      queryClient.setQueryData(
+        reservationQueryKey.list(),
+        (prev: ReservationType[] | undefined) => {
+          if (!prev) return [];
+          return prev.filter((reservation) => reservation.id !== id);
+        }
+      );
     },
   });
 };
