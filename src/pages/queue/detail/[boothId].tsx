@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "@/components/layout/header";
 import { useRouter } from "next/router";
-import { useBooth } from "@/hooks";
+import { useAddReservation, useBooth } from "@/hooks";
 import { formattedTime } from "@/utils";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -14,12 +14,22 @@ export default function Detail() {
   const { t } = useTranslation("booth-detail");
   const { boothId } = router.query;
   const { data } = useBooth(boothId as string) || {};
-
-  const [selectedOption, setSelectedOption] = useState("kakao");
+  const { isSuccess, mutateAsync } = useAddReservation();
 
   if (!boothId) return;
 
-  console.log(data);
+  const handleSubmit = async (data) => {
+    try {
+      const response = await mutateAsync(data);
+      const reservationId = response.id;
+      router.push({
+        pathname: "/queue/success",
+        query: { id: reservationId },
+      });
+    } catch (error) {
+      console.error("예약 생성에 실패했습니다.", error);
+    }
+  };
 
   return (
     <>
@@ -28,19 +38,8 @@ export default function Detail() {
           <Header />
           <div className="content">
             <BoothInfo data={data} t={t} />
-            <BoothForm data={data} t={t} />
-            <div className="button_area">
-              <Link href="/success">
-                <button type="button" className="apply_button -common_button">
-                  {t("detail.booth.apply.btn")}
-                </button>
-              </Link>
-            </div>
+            <BoothForm data={data} onSubmit={handleSubmit} />
           </div>
-          {/* toast 활성화/비활성화, is_active class를 추가/제거 해주세요. */}
-          <p className="weverse_common_toast">
-            {t("detail.alert.enter.required")}
-          </p>
         </div>
       )}
     </>
