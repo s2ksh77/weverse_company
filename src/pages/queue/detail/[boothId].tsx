@@ -1,13 +1,10 @@
-import Head from "next/head";
-import Link from "next/link";
 import Header from "@/components/layout/header";
 import { useRouter } from "next/router";
-import { useAddReservation, useBooth } from "@/hooks";
-import { formattedTime } from "@/utils";
+import { useBooth } from "@/hooks";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 import BoothInfo from "@/components/Booth/BoothInfo";
 import BoothForm from "@/components/InputForm/BoothForm";
+import { useAddReservation } from "@/hooks/useReservation";
 
 export default function Detail() {
   const router = useRouter();

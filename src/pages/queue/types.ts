@@ -18,3 +18,22 @@ export interface DomainType {
 }
 
 export interface CountryCodeType extends DomainType {}
+
+export interface ReservationType {
+  id: string;
+  boothId: string;
+  applicantsCount: number;
+  status: string;
+  reservedAt: string;
+  language: string;
+  email?: string;
+  countryCallingCode?: string;
+  phoneNumber?: string;
+}
+export interface SuccessReservationType extends ReservationType {
+  name: string;
+  locationDescription: string;
+  startTime: string;
+  endTime: string;
+  maxPersonsByTeam: number;
+}
