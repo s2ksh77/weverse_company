@@ -17,7 +17,7 @@ const BoothForm = ({ data, onSubmit }: BoothFormProps) => {
   const { t, i18n } = useTranslation(TRANSLATE_META.DETAIL);
   const [selectedOption, setSelectedOption] = useState("kakao");
   const [isAlertOpen, setIsAlertOpen] = useState(false);
-  const numberRef = useRef<{ isValid: () => boolean; value: boolean }>(null);
+  const numberRef = useRef<{ isValid: () => boolean; value: number }>(null);
   const agreeRef = useRef<{ isValid: () => boolean; value: boolean }>(null);
   const phoneRef = useRef<{
     isValid: () => boolean;
