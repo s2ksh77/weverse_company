@@ -1,40 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weverse 줄서기 비즈니스 서비스 (프론트엔드)
 
-## Getting Started
+위버스 줄서기 서비스는 팬들이 공연 및 행사 부스에서 줄을 서고 대기할 수 있도록 돕는 서비스입니다. 이 프로젝트는 줄서기 서비스의 프론트엔드 요구사항에 따라 구현되며, 사용자가 줄서기를 신청하고, 예약 내역을 확인 및 취소할 수 있는 기능을 제공합니다.
 
-First, run the development server:
+## 요구사항 체크리스트
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 줄서기 메인 화면
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [ ] **뒤로가기 버튼**: 이전 화면에 대한 히스토리를 제공해야 합니다.
+- [ ] **부스 리스트**: 부스 리스트 조회 API를 통해 줄서기 가능한 부스 리스트를 화면에 표시합니다.
+- [ ] **부스의 줄서기 가능 시간**:
+  - 줄서기 시간에 따라 버튼의 상태를 다르게 표시합니다.
+  - **마감** : 줄서기 가능 시간이 지나면 마감 상태.
+  - **준비중** : 줄서기 가능 시간 전에는 준비중 상태.
+  - **신청** : 줄서기 가능 시간 동안은 신청 상태.
+- [ ] **비활성화 버튼** : 마감 및 준비중 상태의 버튼은 비활성화 처리하여 사용자 이벤트에 반응하지 않습니다.
+- [ ] **신청 버튼 동작** : 신청 버튼을 누르면 줄서기 신청 화면으로 이동합니다.
+- [ ] **언어 변경** : 언어 변경 시 앱의 언어가 한국어, 영어, 일본어로 변경되어야 합니다.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 줄서기 신청 화면
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- [ ] **부스 상세 정보** : 부스 상세 조회 API를 호출하여 줄서기 운영 시간과 부스 위치를 표시합니다.
+- [ ] **인원 선택**:
+  - 줄서기 최대 인원이 1명일 경우 인원 선택 버튼을 숨깁니다.
+  - 최대 인원이 2명 이상일 경우, 인원 선택 버튼을 통해 인원을 선택할 수 있습니다.
+- [ ] **필수 입력 검증**: 필수 입력이 완료되지 않으면, "모든 정보를 입력해 주세요."라는 알럿 메시지와 함께 미입력 부분을 강조합니다.
+  - 알럿 메시지는 3초간 표시됩니다.
+- [ ] **줄서기 신청 API 호출**: 신청 버튼을 통해 줄서기 신청을 수행하고, 성공 시 완료 화면으로 이동합니다.
+- [ ] **신청 완료 화면**: 신청한 정보(부스명, 부스 위치, 신청 인원, 알림 방법)를 표시합니다.
+- [ ] **내역보기 버튼**: 내역보기 버튼을 누르면 나의 줄서기 내역 화면으로 이동합니다.
+- [ ] **X 버튼 동작**: X 버튼을 누르면 부스 리스트 화면으로 돌아갑니다.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 나의 줄서기 내역 (예약/취소) 화면
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [ ] **예약 정보 조회**: 나의 줄서기 예약 및 완료 내역을 표시하며, 줄서기 상태에 따라 예정/완료/취소 탭으로 구분합니다.
+  - 입장 예정 및 취소 두 가지 상태만 표시합니다.
+  - 대기 그룹은 하드코딩으로 표시 가능합니다.
+- [ ] **예약 순서**: 가장 최근 예약한 순서대로 상단부터 내역을 표시합니다.
+- [ ] **입장 예정/취소 구분**: 예정 및 완료 탭에서는 입장 예정인 예약을, 취소 탭에서는 취소된 예약을 표시합니다.
+- [ ] **취소 기능**: 예약 내역에서 취소하기 버튼을 통해 줄서기를 취소하고, 화면 하단에 "줄서기가 취소되었습니다."라는 메시지를 3초간 표시합니다.
 
-## Learn More
+## API 명세
 
-To learn more about Next.js, take a look at the following resources:
+- **부스 리스트 조회**: `GET /api/booths`
+- **부스 상세 조회**: `GET /api/details/:boothId`
+- **이메일 도메인 조회**: `GET /api/email-domain`
+- **국가별 전화번호 코드 조회**: `GET /api/country-code`
+- **줄서기 신청**: `POST /api/reservations`
+- **나의 줄서기 내역 조회**: `GET /api/reservations?_sort=-reservedAt`
+- **줄서기 취소**: `PATCH /api/reservations/:reservationId`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 기술 스택
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **프레임워크**: Next.js
+- **Mock API 서버**: json-server
 
-## Deploy on Vercel
+## 추가 구현 사항 (선택)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] TypeScript를 사용하여 구현
+- [ ] 테스트 코드 작성
+- [ ] 예외 처리 또는 추가 기능 구현
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 실행 방법
+
+1. 프로젝트 루트에서 의존성을 설치합니다.
+   ```bash
+   npm install
+   ```
