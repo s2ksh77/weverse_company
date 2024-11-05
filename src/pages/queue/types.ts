@@ -6,3 +6,8 @@ export interface BoothItemType {
   startTime: string;
   endTime: string;
 }
+
+export interface BoothDetailItemType extends BoothItemType {
+  locationDescription: string;
+  maxPersonsByTeam: number;
+}
