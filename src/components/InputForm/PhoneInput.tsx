@@ -75,4 +75,6 @@ export const PhoneInput = forwardRef<{}, PhoneInputProps>((props, ref) => {
       </div>
     </div>
   );
-};
+});
+
+PhoneInput.displayName = "PhoneInput";

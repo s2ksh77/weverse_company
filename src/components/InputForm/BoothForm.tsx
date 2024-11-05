@@ -1,9 +1,10 @@
 import React, { ChangeEvent, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { PhoneInput, EmailInput, NumberInput, AgreeInput } from ".";
+import moment from "moment";
 
 const BoothForm = ({ data, onSubmit }) => {
-  const { t } = useTranslation("booth-detail");
+  const { t, i18n } = useTranslation("booth-detail");
   const [selectedOption, setSelectedOption] = useState("kakao");
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const numberRef = useRef<{ isValid: () => boolean; value: boolean }>(null);
@@ -47,6 +48,8 @@ const BoothForm = ({ data, onSubmit }) => {
       ...data,
       boothId: data.id,
       applicantsCount,
+      reservedAt: moment().format("YYYY-MM-DDTHH:mm:ss"),
+      launguage: i18n.language,
       ...(selectedOption === "kakao"
         ? { countryCallingCode, phoneNumber }
         : { email }),
