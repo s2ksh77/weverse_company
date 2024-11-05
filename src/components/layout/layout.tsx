@@ -25,7 +25,10 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Head>
-      <Header home={isHome} />
+      <Header
+        home={isHome}
+        close={router.pathname.includes("/queue/success")}
+      />
       <div className="container">{children}</div>
       <Footer />
     </>

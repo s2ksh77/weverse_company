@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { ChangeEvent } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -7,6 +8,7 @@ interface IHeaderProps {
 }
 
 export default function Header({ home = false, close = false }: IHeaderProps) {
+  const router = useRouter();
   const { i18n } = useTranslation();
 
   const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -14,15 +16,20 @@ export default function Header({ home = false, close = false }: IHeaderProps) {
     i18n.changeLanguage(value);
   };
 
+  const handleClick = () => {
+    if (close) router.push("/");
+    else router.back();
+  };
+
   return (
     <div className="header">
       <h1 className="blind">Weverse Con Festival</h1>
       {close ? (
-        <button type="button" className="close_button">
+        <button type="button" className="close_button" onClick={handleClick}>
           <span className="blind">close</span>
         </button>
       ) : (
-        <button type="button" className="prev_button">
+        <button type="button" className="prev_button" onClick={handleClick}>
           <span className="blind">previous</span>
         </button>
       )}
