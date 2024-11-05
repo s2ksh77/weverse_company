@@ -11,3 +11,10 @@ export interface BoothDetailItemType extends BoothItemType {
   locationDescription: string;
   maxPersonsByTeam: number;
 }
+
+export interface DomainType {
+  label: string;
+  value: string;
+}
+
+export interface CountryCodeType extends DomainType {}
