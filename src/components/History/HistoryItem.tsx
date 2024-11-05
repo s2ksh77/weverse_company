@@ -1,7 +1,7 @@
+import { TRANSLATE_META } from "@/common/constants";
 import { useRemoveReservation } from "@/hooks/useReservation";
 import { ReservationType } from "@/pages/queue/types";
-import { reservationRepository } from "@/stores/repository/reservationRepository";
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
 
 interface ReservationTypeProps extends ReservationType {
@@ -20,11 +20,10 @@ const HistoryItem = ({
   phoneNumber,
   setIsAlertOpen,
 }: ReservationTypeProps) => {
-  const { t } = useTranslation("history");
+  const { t } = useTranslation(TRANSLATE_META.HISTORY);
   const isCanceled = status === "CANCELED";
   const isWaiting = status === "WAITING";
   const { mutateAsync, isSuccess } = useRemoveReservation();
-  console.log(reservationRepository);
   const handleCancel = async () => {
     try {
       const response = await mutateAsync(id);

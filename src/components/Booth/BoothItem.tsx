@@ -1,3 +1,4 @@
+import { TRANSLATE_META } from "@/common/constants";
 import { BoothItemType } from "@/pages/queue/types";
 import { formattedTime } from "@/utils";
 import moment from "moment";
@@ -11,7 +12,7 @@ const BoothItem = ({
   queuingStartDateTime,
   queuingEndDateTime,
 }: BoothItemType) => {
-  const { i18n } = useTranslation("booth-list");
+  const { i18n } = useTranslation(TRANSLATE_META.LIST);
 
   const getBoothStatus = () => {
     const now = moment();

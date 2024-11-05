@@ -1,3 +1,4 @@
+import { TRANSLATE_META } from "@/common/constants";
 import { useDomains } from "@/hooks/useDomain";
 import {
   ChangeEvent,
@@ -12,7 +13,7 @@ type EmailInputProps = {};
 
 export const EmailInput = forwardRef<{}, EmailInputProps>((props, ref) => {
   const { data } = useDomains();
-  const { t } = useTranslation("booth-detail");
+  const { t } = useTranslation(TRANSLATE_META.DETAIL);
   const [isValid, setIsValid] = useState(true);
   const [selectedDomain, setSelectedDomain] = useState("");
   const [domain, setDomain] = useState("");

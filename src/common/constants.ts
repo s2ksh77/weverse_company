@@ -20,3 +20,10 @@ export const PAGE_TITLE_META = {
     description: "View your canceled queue reservations.",
   },
 };
+
+export const TRANSLATE_META = {
+  DETAIL: "booth-detail",
+  LIST: "booth-list",
+  HISTORY: "history",
+  SUCCESS: "waiting-success",
+};

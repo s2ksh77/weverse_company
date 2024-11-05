@@ -1,8 +1,9 @@
+import { TRANSLATE_META } from "@/common/constants";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 const TicketResistration = () => {
-  const { i18n } = useTranslation("booth-list");
+  const { i18n } = useTranslation(TRANSLATE_META.LIST);
   return (
     <div className="standing_wrap">
       <div className="regist_wrap">

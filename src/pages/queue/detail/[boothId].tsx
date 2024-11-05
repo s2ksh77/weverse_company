@@ -5,12 +5,15 @@ import { useTranslation } from "react-i18next";
 import BoothInfo from "@/components/Booth/BoothInfo";
 import BoothForm from "@/components/InputForm/BoothForm";
 import { useAddReservation } from "@/hooks/useReservation";
+import { TRANSLATE_META } from "@/common/constants";
+import { Suspense } from "react";
+import Loader from "@/components/Loader/Loader";
 
 export default function Detail() {
   const router = useRouter();
-  const { t } = useTranslation("booth-detail");
+  const { t } = useTranslation(TRANSLATE_META.DETAIL);
   const { boothId } = router.query;
-  const { data } = useBooth(boothId as string) || {};
+  const { data, isLoading } = useBooth(boothId as string) || {};
   const { isSuccess, mutateAsync } = useAddReservation();
 
   if (!boothId) return;
@@ -29,16 +32,18 @@ export default function Detail() {
   };
 
   return (
-    <>
-      {data && (
+    <Suspense fallback={<Loader />}>
+      {isLoading ? (
+        <Loader />
+      ) : (
         <div className="container -waiting_detail">
           <Header />
           <div className="content">
-            <BoothInfo data={data} t={t} />
+            <BoothInfo data={data} />
             <BoothForm data={data} onSubmit={handleSubmit} />
           </div>
         </div>
       )}
-    </>
+    </Suspense>
   );
 }

@@ -1,7 +1,10 @@
+import { TRANSLATE_META } from "@/common/constants";
 import { formattedTime } from "@/utils";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const BoothInfo = ({ data, t }) => {
+const BoothInfo = ({ data }) => {
+  const { t } = useTranslation(TRANSLATE_META.DETAIL);
   return (
     <div className="booth_wrap">
       <h2 className="booth_title">{data.name}</h2>
