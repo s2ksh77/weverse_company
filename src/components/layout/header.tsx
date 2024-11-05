@@ -1,9 +1,19 @@
+import { ChangeEvent } from "react";
+import { useTranslation } from "react-i18next";
+
 interface IHeaderProps {
   home?: boolean;
   close?: boolean;
 }
 
 export default function Header({ home = false, close = false }: IHeaderProps) {
+  const { i18n } = useTranslation();
+
+  const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const { value } = event.target;
+    i18n.changeLanguage(value);
+  };
+
   return (
     <div className="header">
       <h1 className="blind">Weverse Con Festival</h1>
@@ -23,10 +33,10 @@ export default function Header({ home = false, close = false }: IHeaderProps) {
         </>
       ) : null}
       <div className="waiting_language_select">
-        <select defaultValue="한국어">
-          <option value="English">English</option>
-          <option value="한국어">한국어</option>
-          <option value="日本語">日本語</option>
+        <select defaultValue="ko" onChange={handleLanguageChange}>
+          <option value="en">English</option>
+          <option value="ko">한국어</option>
+          <option value="ja">日本語</option>
         </select>
       </div>
     </div>

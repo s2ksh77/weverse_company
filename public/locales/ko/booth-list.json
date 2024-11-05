@@ -3,7 +3,7 @@
   "list.booth.apply.btn": "신청",
   "list.booth.close.btn": "마감",
   "list.booth.ready.btn": "준비중",
-  "list.booth.operantion.hours": "줄서기 오픈 시간",
+  "list.booth.operantion.hours": "줄서기 오픈 시간 : {{time}}",
   "list.booth.login.badge": "로그인",
   "list.ticket.area.title": "티켓 등록",
   "list.ticket.area.desc": "스탠딩존은 티켓 등록이 필요하며, 위버스 앱에서만 신청 가능합니다.",

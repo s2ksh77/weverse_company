@@ -3,7 +3,7 @@
   "list.booth.apply.btn": "Join queue",
   "list.booth.close.btn": "Closed",
   "list.booth.ready.btn": "Getting ready",
-  "list.booth.operantion.hours": "Queue opens at",
+  "list.booth.operantion.hours": "Queue opens at {{time}}",
   "list.booth.login.badge": "Login",
   "list.ticket.area.title": "Redeem ticket",
   "list.ticket.area.desc": "You must redeem a ticket to enter \"Standing\". You can redeem your tickets only on the Weverse app.",

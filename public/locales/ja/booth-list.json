@@ -3,7 +3,7 @@
   "list.booth.apply.btn": "受付する",
   "list.booth.close.btn": "受付終了",
   "list.booth.ready.btn": "準備中",
-  "list.booth.operantion.hours": "順番待ち開始時間",
+  "list.booth.operantion.hours": "順番待ち開始時間 : {{time}}",
   "list.booth.login.badge": "ログイン",
   "list.ticket.area.title": "チケット登録",
   "list.ticket.area.desc": "「Standing」の順番待ちは Weverseアプリでのみ受付可能です。 (チケットの登録が必要です。)",
