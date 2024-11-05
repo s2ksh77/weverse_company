@@ -3,18 +3,20 @@ import TicketResistration from "@/components/Ticket/TicketResistration";
 import { useBooths } from "@/hooks/useBooths";
 import Link from "next/link";
 import React from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 const WaitingListPage = () => {
   const { data } = useBooths();
-
-  console.log(data);
+  const { i18n } = useTranslation("booth-list");
 
   return (
     <div className="container -waiting_list">
       <div className="content">
         <p className="waiting_text">
-          페스티벌 현장 반경 3km 안에서 신청 가능하며,{" "}
-          <strong className="strong">위치 정보 이용 동의</strong>가 필수입니다.
+          <Trans
+            i18nKey={"list.booth.gps.desc"}
+            components={{ strong: <strong className="strong" /> }}
+          />
         </p>
         <div className="waiting_wrap">
           <ul className="waiting_list">
@@ -25,7 +27,7 @@ const WaitingListPage = () => {
         </div>
         <TicketResistration />
         <Link href="/history" className="my_waiting">
-          나의 줄서기 내역
+          {i18n.t("list.my.histoty.btn")}
         </Link>
       </div>
     </div>
