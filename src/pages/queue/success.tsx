@@ -60,6 +60,7 @@ export default function Success() {
                   <dd className="info_text">
                     {data?.phoneNumber ? "카카오톡" : "이메일"} <br />
                     {filteredCodes} {data?.phoneNumber}
+                    {data?.email}
                   </dd>
                 </div>
               </dl>

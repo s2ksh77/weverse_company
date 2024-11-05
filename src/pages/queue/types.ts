@@ -37,3 +37,18 @@ export interface SuccessReservationType extends ReservationType {
   endTime: string;
   maxPersonsByTeam: number;
 }
+
+export interface ReservationSubmitType {
+  boothId: string;
+  applicantsCount?: number;
+  locationDescription: string;
+  startTime: string;
+  endTime: string;
+  maxPersonsByTeam: number;
+  status: string;
+  reservedAt: string;
+  language: string;
+  email?: string;
+  countryCallingCode?: string;
+  phoneNumber?: string;
+}

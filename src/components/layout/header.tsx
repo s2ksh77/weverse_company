@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { ChangeEvent } from "react";
 import { useTranslation } from "react-i18next";
@@ -18,7 +19,7 @@ export default function Header({ home = false, close = false }: IHeaderProps) {
 
   const handleClick = () => {
     if (close) router.push("/");
-    else router.back();
+    else if (!home) router.back();
   };
 
   return (
@@ -36,7 +37,9 @@ export default function Header({ home = false, close = false }: IHeaderProps) {
       {!home ? (
         <>
           <div className="spacer"></div>
-          <div className="home_button">Home</div>
+          <div className="home_button">
+            <Link href="/">Home</Link>
+          </div>
         </>
       ) : null}
       <div className="waiting_language_select">

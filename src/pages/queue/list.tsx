@@ -38,7 +38,7 @@ const WaitingListPage = () => {
                 </ul>
               </div>
               <TicketResistration />
-              <Link href="/history" className="my_waiting">
+              <Link href="/queue/history" className="my_waiting">
                 {i18n.t("list.my.histoty.btn")}
               </Link>
             </div>

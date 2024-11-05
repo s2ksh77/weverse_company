@@ -1,3 +1,4 @@
+import { ReservationSubmitType } from "@/pages/queue/types";
 import axios from "axios";
 
 class ReservationRepository {
@@ -15,7 +16,7 @@ class ReservationRepository {
     return response.data;
   }
 
-  async createReservation(dto) {
+  async createReservation(dto: ReservationSubmitType) {
     const response = await axios.post(
       `http://localhost:3001/reservations`,
       dto
@@ -23,9 +24,12 @@ class ReservationRepository {
     return response.data;
   }
 
-  async deleteReservation(id) {
+  async deleteReservation(id: string) {
     const response = await axios.patch(
-      `http://localhost:3001/reservations/${id}`
+      `http://localhost:3001/reservations/${id}`,
+      {
+        status: "CANCELED",
+      }
     );
     return response.data;
   }

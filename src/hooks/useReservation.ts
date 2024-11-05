@@ -1,6 +1,16 @@
-import { ReservationType, SuccessReservationType } from "@/pages/queue/types";
-import { reservationRepository } from "@/stores/repository/reservationRepository";
-import { useMutation, useQuery, UseQueryResult } from "@tanstack/react-query";
+import {
+  ReservationSubmitType,
+  ReservationType,
+  SuccessReservationType,
+} from "@/pages/queue/types";
+import { reservationRepository } from "@/stores/repository/ReservationRepository";
+import {
+  QueryClient,
+  useMutation,
+  useQuery,
+  useQueryClient,
+  UseQueryResult,
+} from "@tanstack/react-query";
 
 export const reservationQueryKey = {
   all: ["reservation"] as const,
@@ -20,18 +30,26 @@ export const useReservation = (
   id: string
 ): UseQueryResult<SuccessReservationType> =>
   useQuery<SuccessReservationType>({
-    queryKey: reservationQueryKey.details(),
+    queryKey: reservationQueryKey.detail(id),
     queryFn: () => reservationRepository.getReservation(id),
   });
 
 export const useAddReservation = () =>
   useMutation({
-    mutationFn: (dto) => reservationRepository.createReservation(dto),
+    mutationFn: (dto: ReservationSubmitType) =>
+      reservationRepository.createReservation(dto),
     onSuccess: (data) => data,
   });
 
-export const useRemoveReservation = () =>
-  useMutation({
-    mutationFn: (id) => reservationRepository.deleteReservation(id),
-    onSuccess: (data) => data,
+export const useRemoveReservation = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (id: string) => reservationRepository.deleteReservation(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: reservationQueryKey.list(),
+      });
+    },
   });
+};

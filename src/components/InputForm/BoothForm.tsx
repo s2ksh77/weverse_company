@@ -1,11 +1,19 @@
 import React, { ChangeEvent, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useForm, FormProvider } from "react-hook-form";
 import { PhoneInput, EmailInput, NumberInput, AgreeInput } from ".";
 import moment from "moment";
 import { TRANSLATE_META } from "@/common/constants";
+import {
+  BoothDetailItemType,
+  ReservationSubmitType,
+} from "@/pages/queue/types";
 
-const BoothForm = ({ data, onSubmit }) => {
+type BoothFormProps = {
+  data: BoothDetailItemType;
+  onSubmit: (data: ReservationSubmitType) => void;
+};
+
+const BoothForm = ({ data, onSubmit }: BoothFormProps) => {
   const { t, i18n } = useTranslation(TRANSLATE_META.DETAIL);
   const [selectedOption, setSelectedOption] = useState("kakao");
   const [isAlertOpen, setIsAlertOpen] = useState(false);
@@ -35,28 +43,22 @@ const BoothForm = ({ data, onSubmit }) => {
       return;
     }
 
-    console.log(
-      phoneRef.current?.value,
-      emailRef.current?.value,
-      agreeRef.current?.value,
-      numberRef.current?.value
-    );
     const applicantsCount = numberRef.current?.value;
-    const email = emailRef.current?.value;
-    const countryCallingCode = phoneRef.current?.value.countryCode;
-    const phoneNumber = phoneRef.current?.value.value;
-
-    onSubmit({
+    const payload = {
       ...data,
       boothId: data.id,
       applicantsCount,
       reservedAt: moment().format("YYYY-MM-DDTHH:mm:ss"),
-      launguage: i18n.language,
+      language: i18n.language,
       status: "WAITING",
       ...(selectedOption === "kakao"
-        ? { countryCallingCode, phoneNumber }
-        : { email }),
-    });
+        ? {
+            countryCallingCode: phoneRef.current?.value.countryCode,
+            phoneNumber: phoneRef.current?.value.value,
+          }
+        : { email: emailRef.current?.value }),
+    };
+    onSubmit(payload);
   };
 
   const handleAlertOpen = () => {

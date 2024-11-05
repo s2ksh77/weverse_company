@@ -8,17 +8,18 @@ import { useAddReservation } from "@/hooks/useReservation";
 import { TRANSLATE_META } from "@/common/constants";
 import { Suspense } from "react";
 import Loader from "@/components/Loader/Loader";
+import { BoothDetailItemType, ReservationSubmitType } from "../types";
 
 export default function Detail() {
   const router = useRouter();
   const { t } = useTranslation(TRANSLATE_META.DETAIL);
   const { boothId } = router.query;
   const { data, isLoading } = useBooth(boothId as string) || {};
-  const { isSuccess, mutateAsync } = useAddReservation();
+  const { mutateAsync } = useAddReservation();
 
   if (!boothId) return;
 
-  const handleSubmit = async (data) => {
+  const handleSubmit = async (data: ReservationSubmitType) => {
     try {
       const response = await mutateAsync(data);
       const reservationId = response.id;
@@ -39,8 +40,11 @@ export default function Detail() {
         <div className="container -waiting_detail">
           <Header />
           <div className="content">
-            <BoothInfo data={data} />
-            <BoothForm data={data} onSubmit={handleSubmit} />
+            <BoothInfo data={data as BoothDetailItemType} />
+            <BoothForm
+              data={data as BoothDetailItemType}
+              onSubmit={handleSubmit}
+            />
           </div>
         </div>
       )}

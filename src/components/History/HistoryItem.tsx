@@ -1,6 +1,7 @@
 import { TRANSLATE_META } from "@/common/constants";
 import { useRemoveReservation } from "@/hooks/useReservation";
 import { ReservationType } from "@/pages/queue/types";
+import moment from "moment";
 import React, { Dispatch, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -50,7 +51,9 @@ const HistoryItem = ({
         </div>
         <div className="info_item">
           <dt className="info_title">{t("history.info.applicationTime")}</dt>
-          <dd className="info_text">{reservedAt}</dd>
+          <dd className="info_text">
+            {moment(reservedAt).format("YYYY. MM. DD HH:mm")}
+          </dd>
         </div>
         <div className="info_item">
           <dt className="info_title">{t("history.info.person")}</dt>

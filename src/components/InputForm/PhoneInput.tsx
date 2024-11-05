@@ -33,7 +33,8 @@ export const PhoneInput = forwardRef<{}, PhoneInputProps>((props, ref) => {
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
+    const { value: targetValue } = e.target;
+    const value = targetValue.replace(/\D/g, "");
     setValue(value);
   };
 
